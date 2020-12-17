@@ -21,9 +21,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const CustomCalendar = ({ onChange, events, allEvents }) => {
+const CustomCalendar = ({ events, allEvents }) => {
   const classes = useStyles();
-  const [selectDate, setSelectDate] = useState(moment());
+  const [selectDate, setSelectDate] = useState(moment(events[0]));
 
   const renderDayInPicker = (
     date,

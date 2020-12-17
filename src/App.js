@@ -1,4 +1,11 @@
-import { Box, Button, Divider, TextField, Typography } from "@material-ui/core";
+import {
+  Box,
+  Button,
+  Divider,
+  Link,
+  TextField,
+  Typography,
+} from "@material-ui/core";
 import React, { useState } from "react";
 import Events from "./components/Events";
 import { postCalendar } from "./services/calendar";
@@ -12,8 +19,8 @@ export default function App() {
     {
       type: "VEVENT",
       params: [],
-      end: "2020-12-17T05:15:00.000Z",
-      start: "2020-12-16T05:15:00.000Z",
+      end: "2020-12-02T05:15:00.000Z",
+      start: "2020-12-02T05:15:00.000Z",
       datetype: "date",
       uid: "6fec1092d3fa-f5e536ddc26a126623f9c531cf84448b@airbnb.com",
       summary: "Go to store",
@@ -21,8 +28,8 @@ export default function App() {
     {
       type: "VEVENT",
       params: [],
-      end: "2020-12-19T05:12:00.000Z",
-      start: "2020-12-18T05:11:00.000Z",
+      end: "2020-12-04T05:12:00.000Z",
+      start: "2020-12-04T05:11:00.000Z",
       datetype: "date",
       uid: "6fec1092d3fa-ed3a6db52dc0c3c765e716631f0c4118@airbnb.com",
       summary: "Meeting",
@@ -30,8 +37,8 @@ export default function App() {
     {
       type: "VEVENT",
       params: [],
-      end: "2020-12-20T05:19:00.000Z",
-      start: "2020-12-19T05:09:00.000Z",
+      end: "2020-12-21T05:19:00.000Z",
+      start: "2020-12-21T05:09:00.000Z",
       datetype: "date",
       uid: "6fec1092d3fa-898bddf0080ba9d7f4eb80e38ef69b6e@airbnb.com",
       summary: "Other meeting",
@@ -39,8 +46,8 @@ export default function App() {
     {
       type: "VEVENT",
       params: [],
-      end: "2021-12-31T05:12:00.000Z",
-      start: "2020-12-31T05:11:00.000Z",
+      end: "2021-12-30T05:12:00.000Z",
+      start: "2020-12-30T05:11:00.000Z",
       datetype: "date",
       uid: "6fec1092d3fa-19f2218ed870322e11ad3e0d5f669095@airbnb.com",
       summary: "Jhon's birthday",
@@ -56,6 +63,13 @@ export default function App() {
   return (
     <div>
       <Typography variant="h3">Example Sync Calendar</Typography>
+      <Link
+        target="_blank"
+        rel="noreferrer"
+        href="https://github.com/CrisRonda?tab=repositories"
+      >
+        <Typography variant="caption">My Github Page</Typography>
+      </Link>
       <Divider />
       <Typography>Add your calendar link</Typography>
       <Typography>
@@ -87,13 +101,6 @@ export default function App() {
         </Button>
       </Box>
       <Events events={events} />
-      <a
-        target="_blank"
-        rel="noreferrer"
-        href="https://github.com/CrisRonda?tab=repositories"
-      >
-        My Github Page
-      </a>
     </div>
   );
 }

@@ -1,7 +1,14 @@
 import React from "react";
 import Calendar from "../Calendar";
 import moment from "moment";
-import { Box, Card, CardContent, Typography } from "@material-ui/core";
+import {
+  Box,
+  Card,
+  CardContent,
+  colors,
+  Divider,
+  Typography,
+} from "@material-ui/core";
 
 const getStringDate = (date) => new Date(date).toLocaleString();
 
@@ -13,9 +20,11 @@ const Events = ({ events = [] }) => {
     );
     return (
       <>
-        <Box style={{ display: "flex", flexWrap: "wrap" }}>
+        <Typography variant="h4">Events</Typography>
+        <Divider />
+        <Box display="flex" flexWrap="wrap" justifyContent="center" my={2}>
           {events.map(({ description, start, end, lastmodified, summary }) => (
-            <Card style={{ margin: 4 }}>
+            <Card style={{ margin: 4, backgroundColor: colors.grey[400] }}>
               <CardContent>
                 <Typography>{`Titulo: ${summary}`}</Typography>
                 <Typography>{`Descripción: ${description}`}</Typography>
