@@ -4,6 +4,14 @@ This example implements RFC 5545 iCalendar for sync events from URL.
 
 The project must be used with its [backend](https://github.com/CrisRonda/syncCalendarBackend) which you can find in my repo.
 
+
+# How to run
+
+1. Install dependencies with yarn or npm
+2. Run with `yarn start`
+3. Go to `http://localhost:3000`
+4. Refactor and enjoy! 
+
 # Licence
 
 
